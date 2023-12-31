@@ -3,19 +3,21 @@ package jp.techacademy.jiro.kotlinlog
 import android.util.Log
 
     open class Human : Animal, Thinkable {
-        // hobbyをという文字列型のメンバ変数を用意し初期化。
-        var hobby: String = "Programing"
 
-        // 引数付きコンストラクタ
-        constructor(name: String, age: Int): super(name, age) {
+        var hobby: String
+
+        // Animal承継用の引数付きコンストラクタ
+        constructor(name: String, age: Int, hobby: String): super(name, age) {
+            this.hobby = hobby
         }
-
 
         // Animalクラスのメソッドをオーバーライド
         override fun say() {
-//
+            Log.d("kotlintest", "私の名前は" + name + "です。"+"年は" + age + "歳です。")
         }
+
         // thinkableインターフェイスのメソッドをオーバーライド
         override fun think() {
+            Log.d("kotlintest", "私は" + hobby + "について考える" )
         }
     }

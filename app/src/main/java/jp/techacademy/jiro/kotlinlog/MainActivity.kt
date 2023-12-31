@@ -11,13 +11,11 @@ class MainActivity : AppCompatActivity() {
 
         // クラス
 
-        val human = Human("Jiro", 41)      // Humanのインスタンスを作る
+        val human1 = Human("Jiro", 41,"")      // Humanのインスタンスを作る
 
-        human.say() // say メソッドを呼び出し
-        Log.d("kotlintest", "私の名前は" + human.name + "です。"+"年は" + human.age + "歳です。")
+        human1.say() // say メソッドを呼び出し
 
-        human.think() // think メソッドを呼び出し
-        Log.d("kotlintest", "私は" + human.hobby + "について考える" )
-
+        val human2 = Human("Jiro", 41, "プログラミング")      // Humanのインスタンスを作る
+        human2.think() // think メソッドを呼び出し
     }
 }
