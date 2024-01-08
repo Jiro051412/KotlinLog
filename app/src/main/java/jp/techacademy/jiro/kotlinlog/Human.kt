@@ -11,6 +11,7 @@ import android.util.Log
             this.hobby = hobby
         }
 
+
         // Animalクラスのメソッドをオーバーライド
         override fun say() {
             Log.d("kotlintest", "私の名前は" + name + "です。"+"年は" + age + "歳です。")
